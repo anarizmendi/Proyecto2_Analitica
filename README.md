@@ -115,35 +115,44 @@ El tablero final debe quedar disponible en una URL pública.
 ---
 
 ## **Instrucciones Generales para Correr el Proyecto Localmente**
+### 1. Crear el entorno virtual
 
-### 1. Crear entorno virtual
+En la carpeta raíz del repositorio ejecutar:
 
-```bash
 python3 -m venv airbnb-env
+
+Puedes llamar el entorno como quieras, pero recomendamos airbnb-env.
+
+⸻
+
+### 2. Activar el entorno virtual
+
+Mac / Linux:
+
 source airbnb-env/bin/activate
-```
 
-### 2. Instalar dependencias
+Windows (PowerShell):
 
-```bash
-pip install -r requirements.txt
-```
+airbnb-env\Scripts\activate
 
-### 3. Ejecutar el notebook
 
-Abrir `modelo/Modelos_Predictivos_Andes.ipynb`.
+⸻
 
-### 4. Ejecutar MLflow (opcional)
+### 3. Instalar todas las dependencias necesarias
 
-```bash
-mlflow ui
-```
+Este proyecto requiere versiones compatibles entre TensorFlow, MLflow y protobuf.
+Puedes instalar todo en un solo comando:
 
-### 5. Cargar y ejecutar el tablero
+pip install numpy==1.26.4
+pip install pandas==2.2.1
+pip install scikit-learn==1.4.0
+pip install tensorflow==2.16.1
+pip install protobuf<5.0.0
+pip install mlflow==2.14.1
+pip install joblib
+pip install seaborn matplotlib
+pip install dash plotly
 
-```bash
-cd despliegue
-python app.py
 ```
 
 ---
