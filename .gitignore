@@ -1,17 +1,7 @@
-# Ignorar entorno virtual
-airbnb-env/
-venv/
-.env/
-
-# MacOS basura
-.DS_Store
-
-# Python cache
+models/
+backups/
+mlruns/
+*.joblib
+*.pkl
 __pycache__/
 *.pyc
-
-# Jupyter checkpoints
-.ipynb_checkpoints/
-
-# MLflow experiment tracking
-mlruns/
